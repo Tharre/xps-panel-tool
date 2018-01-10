@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MUPDefinition xsi:schemaLocation="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd mupdefinition.xsd" xmlns="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<packageinformation>
+	<name>Compal</name>
+	<version>0.0.0.19</version>
+		<installertype>custom</installertype>
+		<packagegrouping>single_package</packagegrouping>
+		<packagingtype>executable</packagingtype>
+		<releasetype>APP</releasetype>
+		<mupspecificationversion>2.4.3</mupspecificationversion>
+		<supportedoperatingsystems>
+			<osidentifier name="Windows7" architecture="x86"/>
+			<osidentifier name="Windows7" architecture="x64"/>
+			<osidentifier name="Windows8.1" architecture="x86"/>
+			<osidentifier name="Windows8.1" architecture="x64"/>
+			<osidentifier name="Windows10" architecture="x86"/>
+			<osidentifier name="Windows10" architecture="x64"/>
+		</supportedoperatingsystems>
+	<content>
+			<Device componentID="104342">
+				<Image type="APP" version="0.0.0.16" >
+					<file>PanelFW_DBC.exe</file>
+				</Image>
+				<Image type="APP" version="1.0.0.4" >
+					<file>QSWMIMngr.dll</file>
+				</Image>
+			</Device>
+		</content>
+	</packageinformation>
+	<executable>
+		<executablename>PanelFW_DBC.exe</executablename>
+	</executable>
+	<behaviors>
+		<behavior name="attended"/>
+		<behavior name="unattended">
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">silent</optionvalue>
+			</vendoroption>
+		</behavior>
+	</behaviors>
+	<parameters>
+		<parametermapping name="logfile">
+			<vendoroption>
+				<optionvalue switch="/" requiresvalue="true" valuedelimiter="=">log</optionvalue>
+			</vendoroption>
+		</parametermapping>
+	</parameters>
+	<returncodes>
+		<returncodemapping name="SUCCESS">
+		<vendorreturncode>0</vendorreturncode>
+		</returncodemapping>
+		<returncodemapping name="ERROR">
+			<vendorreturncode>104</vendorreturncode>
+			<vendorreturncode>105</vendorreturncode>
+			<vendorreturncode>106</vendorreturncode>
+			<vendorreturncode>107</vendorreturncode>
+			<vendorreturncode>108</vendorreturncode>
+			<vendorreturncode>109</vendorreturncode>
+			<vendorreturncode>110</vendorreturncode>
+		</returncodemapping>
+		<returncodemapping name="REBOOT_REQUIRED">
+			<vendorreturncode>3010</vendorreturncode>
+		</returncodemapping>
+		<returncodemapping name="ERROR_INSTALL_PLATFORM_UNSUPPORTED">
+			<vendorreturncode>1633</vendorreturncode>
+		</returncodemapping>
+		<returncodemapping name="UNKNOWN_OPTION">
+			<vendorreturncode>1608</vendorreturncode>
+		</returncodemapping>
+	</returncodes>
+	<inventorymetadata>
+	<fullpackageidentifier>
+	<msis>
+			<msi componentID="104342">
+				<identifyingnumber>{77258AF4-49AE-4C6B-8169-4B91AD6E9936}</identifyingnumber>
+				<!--upgradecode>{A0103E7A-C24F-4592-8183-073CC501D099}</upgradecode-->
+				<version>0.0.0.19</version>
+			</msi>
+			</msis>
+	</fullpackageidentifier>
+	</inventorymetadata>
+</MUPDefinition>

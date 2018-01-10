@@ -1,0 +1,1 @@
+TCON_DP_REWORK_TOOL.exe -s -u -f:NT71395_flash.ini -romcode:"(merge)Reindeer_rev0.06_DBC OFF_filter_MCU_141112.hex"

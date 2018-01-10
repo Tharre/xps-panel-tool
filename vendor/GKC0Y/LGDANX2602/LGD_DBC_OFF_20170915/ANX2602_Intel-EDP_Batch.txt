@@ -1,0 +1,7 @@
+SetChip ANX2602
+ROMSize 4K
+//SetDP Intel-eDP
+SetDP Intel-EDP
+ramwrite chip_db\ANX2602.db
+Romwrite binary.bin
+CRC32 on
